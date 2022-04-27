@@ -1,0 +1,32 @@
+body, #container{
+    min-height: 100vh;
+    background-color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.topcontainer, .middlecontainer, .bottomcontainer {
+  display: flex;
+  flex-flow: row wrap;
+
+}
+
+.innerbox{
+    min-height: 33vh;
+    border: 5px solid #222;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+.topcontainer .innerbox{
+    flex-basis: 50%;
+    background-color: white;}
+.middlecontainer .innerbox{
+    flex-basis: 33%;
+    background-color: pink;}
+.bottomcontainer .innerbox{
+    flex-basis: 100%; background-color: green}
+    
+@media screen and (max-width:800px) {
+    .middlecontainer .innerbox {
+        flex-basis: 100%;
+   }  
+}
